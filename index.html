@@ -4,6 +4,16 @@
        <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>ITMRESULT</title>
+         <style>
+        #error {
+            color: #761b18;
+            text-align: center;
+            margin: 0 auto;
+    background-color: #f9d6d5;
+    border-color: #f7c6c5;
+}
+      </style>
+     <div id="error"></div>
      <script>
 function validateForm(event) {
     event.preventDefault(); // Prevent the form from submitting by default
@@ -21,7 +31,7 @@ function validateForm(event) {
         window.location.href = "abc.html";
     } else {
         // If parameters don't match any criteria, display an error message
-        document.getElementById("error").innerText = "Invalid parameters";
+        document.getElementById("error").innerText = "Invalid Infromation";
     }
 }
 </script>
@@ -1433,7 +1443,6 @@ function validateForm(event) {
                                     </div>
                                     <center><input style="text-align: center;" class="btn btn-info" type="submit" name="view" value="submit"></center>
                         </form>
-                           <div id="error" style="color: red;"></div>
 
                     </div>
                 </div>
