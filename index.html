@@ -1,14 +1,30 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- CSRF Token -->
-        <meta name="csrf-token" content="yBTcHzcw3u38LdEwft4iG9YnlxvfZlChBXd4geYH">
-        <title>ITMRESULT</title>
-        <!-- Scripts -->
-<!--         <script src="https://exam.itmbu.ac.in/js/app.js" defer></script> -->
-        <!-- Fonts -->
+       <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ITMRESULT</title>
+     <script>
+function validateForm(event) {
+    event.preventDefault(); // Prevent the form from submitting by default
+
+    // Get form inputs
+    var student_name = document.getElementById("student_name").value.trim();
+    var enrollment_no = document.getElementById("enrollment_no").value.trim();
+    var seat_no = document.getElementById("seat_no").value.trim();
+
+    // Check if the parameters match the validation criteria
+    if (student_name === "PARMAR MURTAZA TAHERBHAI" && enrollment_no === "22C46096" && seat_no === "3303096") {
+        window.location.href = "Result.html";
+    } else if (student_name === "a" && enrollment_no === "b" && seat_no === "c") {
+        // If parameters match, redirect to abc.html
+        window.location.href = "abc.html";
+    } else {
+        // If parameters don't match any criteria, display an error message
+        document.getElementById("error").innerText = "Invalid parameters";
+    }
+}
+</script>
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <script src="https://www.google.com/recaptcha/api.js" ></script>
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -64,7 +80,7 @@
                                 </table>
                                 <br>
                                 <br>
-                                <form action="Result.html">
+                                <form id="myForm" onsubmit="validateForm(event)">
                                     `                    <input type="hidden" name="_token" value="yBTcHzcw3u38LdEwft4iG9YnlxvfZlChBXd4geYH">
                                     <div class="form-group row">
                                         <label for="branch" class="col-md-4 col-form-label text-md-right">Branch Name</label>
@@ -1417,7 +1433,7 @@
                                     </div>
                                     <center><input style="text-align: center;" class="btn btn-info" type="submit" name="view" value="submit"></center>
                         </form>
-
+                           <div id="error" style="color: red;"></div>
 
                     </div>
                 </div>
