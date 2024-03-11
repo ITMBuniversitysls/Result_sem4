@@ -54,6 +54,10 @@ function validateForm(event) {
 
 </head>
 <body>
+    <div id="errorMessage"  class="alert alert-danger alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Invalid Infromation </strong>
+    </div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -94,10 +98,7 @@ function validateForm(event) {
                                 </table>
                                 <br>
                                 <br
-                                    <div id="errorMessage"  class="alert alert-danger alert-block">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <strong>Invalid Infromation </strong>
-</div>
+                                    
                                 <form id="myForm" onsubmit="validateForm(event)">
                                     `                    <input type="hidden" name="_token" value="yBTcHzcw3u38LdEwft4iG9YnlxvfZlChBXd4geYH">
                                     <div class="form-group row">
