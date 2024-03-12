@@ -46,7 +46,11 @@ function validateForm(event) {
             window.location.reload();
         }, 1700);
     }
-}
+    } else {
+        // Captcha not completed
+        displayErrorMessage("Please complete the captcha!");
+    }
+         }
 </script>
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
         <script src="https://www.google.com/recaptcha/api.js" ></script>
