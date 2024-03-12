@@ -24,10 +24,13 @@ function validateForm(event) {
     event.preventDefault(); // Prevent the form from submitting by default
 
     // Get form inputs
+    var captchaResponse = grecaptcha.getResponse();
     var student_name = document.getElementById("student_name").value.trim().toLowerCase();
     var enrollment_no = document.getElementById("enrollment_no").value.trim();
     var seat_no = document.getElementById("seat_no").value.trim();
 
+    if (captchaResponse) {
+    
     if (student_name.includes("parmar murtaza") && enrollment_no === "22C46096" && seat_no === "3303096") {
         window.location.href = "Result.html";
     } else if (student_name.includes("kansara mizan") && enrollment_no === "22C46063" && seat_no === "3303063") {
