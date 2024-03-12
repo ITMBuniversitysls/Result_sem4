@@ -37,7 +37,8 @@ function validateForm(event) {
     } else {
        var errorMessage = document.getElementById("errorMessage");
         errorMessage.innerText = "Invalid information!";
-        errorMessage.style.display = "block"; 
+        errorMessage.style.display = "block";
+        window.scrollTo(0, 0);
         setTimeout(function() {
             window.location.reload();
         }, 1500);
